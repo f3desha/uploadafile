@@ -1,0 +1,15 @@
+{
+    "name": "kas_i/fileuploadproject",
+    "description": "Upload files by chunks",
+    "autoload": {
+        "psr-4": {
+            "KasI\\Fileuploadproject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oleksandr Kuzmenko"
+        }
+    ],
+    "require": {}
+}
