@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     var resumable = new Resumable({
-        target: 'upload.php', // URL to your upload PHP script
+        target: 'upload.php',
         testTarget: 'check.php',
-        chunkSize: 1 * 1024 * 1024, // 1MB chunks
-        simultaneousUploads: 3, // Number of simultaneous uploads
-        testChunks: true, // Enable chunk testing
+        chunkSize: 1 * 1024 * 1024,
+        simultaneousUploads: 3,
+        testChunks: true,
     });
 
     resumable.on('fileAdded', function(file) {
-        resumable.upload(); // This triggers the upload process including chunk testing
+        resumable.upload();
     });
 
     resumable.on('progress', function() {
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var fileInput = document.getElementById('fileToUpload');
 
-    // Add an event listener for the 'change' event
     fileInput.addEventListener('change', function(event) {
         var progressBar = document.getElementById('progressBar');
         var progressSpan = document.getElementById('percentSpan');
